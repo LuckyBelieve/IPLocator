@@ -51,7 +51,7 @@ function App() {
         <LocationDetails Location={data} />
       </div>
       <div>
-        <Map />
+        { data.location !== undefined && <Map  data={data}/>}
       </div>
       {isLoading && <div  className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-blur-2xl ">
         <div>
